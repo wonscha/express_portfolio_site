@@ -1,13 +1,17 @@
 <%- include partials/header.ejs %>
-<%- include partials/main_nav.ejs %>
+  <%- include partials/main_nav.ejs %>
 
-      <!-- Main Content -->
-      <main class="container">
-        <div>
-          <h1>Hello <%= title %>
-          </h1>
-        </div>
-      </main>
+    <!-- Home Content -->
+    <section class="home-section">
+      <img src="/Assets/images/home-bg.png" class="img-fluid" alt="bg">
+      <div class="home-text">
+        <h2>
+          <%= title %> of Wonsuk Cha
+        </h2>
+        <h4>Challenge-oriented, adventurous, self-motivated <br>Software Engineer</h4>
+        <a href="/about"> Click here to know me further </a>
+      </div>
+    </section>
 
-<%- include partials/bottom_nav.ejs %>
-<%- include partials/footer.ejs %>
+    <%- include partials/bottom_nav.ejs %>
+      <%- include partials/footer.ejs %>
