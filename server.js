@@ -1,4 +1,9 @@
-#!/usr/bin/env node
+/*
+File name: server.js
+Student’s Name: Wonsuk Cha
+StudentID: 301155132
+Date: 2021.02.13.
+*/
 
 /**
  * Module dependencies.

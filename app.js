@@ -1,3 +1,10 @@
+/*
+File name: app.js
+Student’s Name: Wonsuk Cha
+StudentID: 301155132
+Date: 2021.02.13.
+*/
+
 // Installed 3rd party packages
 let createError = require('http-errors');
 let express = require('express');
@@ -20,6 +27,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 
+
+// route setup
 app.use('/', indexRouter);
 
 app.post("/contact", (req, res) => {

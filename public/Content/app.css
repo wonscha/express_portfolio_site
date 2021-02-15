@@ -1,5 +1,13 @@
-/* Custom style goes here */
+/***************
 
+File name: app.css
+Student’s Name: Wonsuk Cha
+StudentID: 301155132
+Date: 2021.02.13.
+
+ ***************/
+
+ /* Common style */
 .nav-logo {
     max-width: 50px;
     max-height: 50px;
@@ -14,13 +22,6 @@ body {
     font-weight: 700;
 }
 
-.home-text {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .btn-text {
     text-transform: uppercase;
     font-weight: 700;
@@ -28,4 +29,12 @@ body {
 
 .card-img {
     max-height: 230px;
+}
+
+ /* Home style */
+.home-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
