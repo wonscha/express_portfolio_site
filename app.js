@@ -22,6 +22,17 @@ app.use(express.static(path.join(__dirname, 'node_modules')));
 
 app.use('/', indexRouter);
 
+app.post("/contact", (req, res) => {
+
+  console.log('First Name: ', req.body.fname);
+  console.log('Last Name: ', req.body.lname);
+  console.log('Contact Number: ', req.body.tel);
+  console.log('Email: ', req.body.email);
+  console.log('Message: ', req.body.message);
+
+  res.redirect('/');
+})
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
