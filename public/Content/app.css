@@ -5,18 +5,27 @@
     max-height: 50px;
 }
 
-.home-text {
+body {
     color: #5b5b5b;
+}
+
+.section-heading {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.home-text {
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.btn-main {
-    color: #5b5b5b;
-    background-color: #3ab5fe;
-    font-size: 1.2rem;
-    padding: 10px;
-    border-radius: 1px;
+.btn-text {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.card-img {
+    max-height: 230px;
 }

@@ -1,0 +1,62 @@
+<%- include partials/header.ejs %>
+    <%- include partials/main_nav.ejs %>
+
+        <section class="py-5">
+            <div class="container">
+                <h1 class="section-heading py-1">
+                    <%= title %>
+                </h1>
+                <p>I will contact you back. Thank you.</p>
+
+                <form class="needs-validation" novalidate>
+                    <div class="row g-3">
+                        <div class="col-sm-6 mb-3">
+                            <label for="firstName" class="form-label">First name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                            <div class="invalid-feedback">
+                                Valid first name is required.
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 mb-3">
+                            <label for="lastName" class="form-label">Last name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                            <div class="invalid-feedback">
+                                Valid last name is required.
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label for="contact-number" class="form-label">Contact Number</label>
+                            <input type="tel" class="form-control" id="email" placeholder="000-000-0000">
+                            <div class="invalid-feedback">
+                                Please enter your contact number.
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                            <div class="invalid-feedback">
+                                Please enter a valid email address.
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" class="form-control" name="message" placeholder="Leave me message"
+                                style="height:100px"></textarea>
+                        </div>
+
+
+                        <div class="col-12">
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <%- include partials/bottom_nav.ejs %>
+            <%- include partials/footer.ejs %>

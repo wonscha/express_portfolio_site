@@ -1,10 +1,57 @@
 <%- include partials/header.ejs %>
-  <%- include partials/main_nav.ejs %>
+    <%- include partials/main_nav.ejs %>
 
-    <!-- Home Content -->
-    <section class="home-section">
-        <p><%= title %></p>
-    </section>
+        <!-- Home Content -->
+        <section class="py-5">
+            <div class="container">
+                <h1 class="section-heading py-1">
+                    My <%= title %>
+                </h1>
+                <div class="row">
+                    <div class="card col" style="margin: 5px;">
+                        <img src="/Assets/images/electricity.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Tokyo Electricity Power Company</h5>
+                            <h6>Role: Developer</h6>
+                            <p class="card-text">This project was to automate calculation of electricity fees for more
+                                than 30 million households using RPA tool. With success of this project, the company
+                                could save cost worth 70 FTE.
+                            </p>
+                        </div>
+                    </div>
 
-    <%- include partials/bottom_nav.ejs %>
-      <%- include partials/footer.ejs %>
+                    <div class="card col" style="margin: 5px;">
+                        <img src="/Assets/images/loan.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">SMBC Loan Approval Process Automation
+                            </h5>
+                            <h6>Role: Architect & Developer</h6>
+                            <p class="card-text">This project was to automate calculation of electricity fees for more
+                                than 30 million households using RPA tool. With success of this project, the company
+                                could save cost worth 70 FTE.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card col" style="margin: 5px;">
+                        <img src="/Assets/images/calculation.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Soft Calculator Project</h5>
+                            <h6>Role: Developer</h6>
+                            <p class="card-text">This project was personal project to practice developing iOS app with
+                                unique
+                                design. This app is the first iOS app applied dynamic neumorphism button design.
+                                Please search "Soft Calculator" at app store. This app has been downloaded about 1,000
+                                times globally.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+
+        <%- include partials/bottom_nav.ejs %>
+            <%- include partials/footer.ejs %>

@@ -1,15 +1,18 @@
 <%- include partials/header.ejs %>
     <%- include partials/main_nav.ejs %>
 
-        <!-- Main Content -->
+        <!-- About Content -->
         <section class="about-section py-5">
             <div class="container">
+                <h1 class="section-heading py-1">
+                    <%= title %>
+                </h1>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-5">
                         <img src="/Assets/images/wonsuk.jpg" class="img-fluid" alt="Wonsuk">
                     </div>
-                    <div class="col-md-8">
-                        <h1>Wonsuk Cha</h1>
+                    <div class="col-md-7 my-auto">
+                        <h3>Wonsuk Cha</h3>
                         <p>I was born in Seoul, South Korea.
                             <br>I majored in Chemistry Education at Seoul National University.
                             <br>I have worked for three companies in Tokyo, Japan.
@@ -18,11 +21,10 @@
                             <br> - Daimler Truck Asia: Business Consultant & RPA Developer
                         </p>
                         <div>
-
                             <a href="/Assets/pdf/resume.pdf">
-                                <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-file-pdf mr"></i>
+                                <button type="button" class="btn btn-primary btn-sm btn-text"><i
+                                        class="fas fa-file-pdf mr-2"></i>
                                     Check Resume</button>
-
                             </a>
                         </div>
                     </div>
