@@ -32,7 +32,6 @@ app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use('/', indexRouter);
 
 app.post("/contact", (req, res) => {
-
   console.log('First Name: ', req.body.fname);
   console.log('Last Name: ', req.body.lname);
   console.log('Contact Number: ', req.body.tel);
