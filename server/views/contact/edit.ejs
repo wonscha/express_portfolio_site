@@ -8,6 +8,7 @@
 <%- include ../partials/header.ejs %>
 <%- include ../partials/main_nav.ejs %>
 
+<!-- Contact Edit View -->
 <section>
     <div class="container">
         <div class="row">
@@ -36,6 +37,9 @@
 
                     <fieldset class="form-group text-right">
                         <input type="submit" class="btn btn-success" value="Submit">
+                        <a href="/contact-list/delete/<%= contactToEdit._id %>">
+                            <input type="button" class="btn btn-danger" value="Delete">
+                        </a>
                         <a href="/contact-list">
                             <input type="button" class="btn btn-waring" value="Cancel">
                         </a>
