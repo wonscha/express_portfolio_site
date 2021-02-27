@@ -9,46 +9,42 @@ Date: 2021.02.13.
 
 var express = require('express');
 var router = express.Router();
+let passport = require('passport');
+
+let indexController = require('../controllers/index');
+
+// create the User Model instance
+let userModel = require('../models/user');
+let User = userModel.User;
 
 /* GET Home page. */
-router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Home' });
-});
+router.get('/', indexController.displayHomePage);
 
 /* GET Home page. */
-router.get('/home', function (req, res, next) {
-  res.render('index', { title: 'Home' });
-});
+router.get('/home', indexController.displayHomePage);
 
 /* GET About Me page. */
-router.get('/about', function (req, res, next) {
-  res.render('about', { title: 'About Me' });
-});
+router.get('/about', indexController.displayAboutPage);
 
 /* GET Projects page. */
-router.get('/projects', function (req, res, next) {
-  res.render('projects', { title: 'Projects' });
-});
+router.get('/projects', indexController.displayProjectsPage);
 
 /* GET Services page. */
-router.get('/services', function (req, res, next) {
-  res.render('services', { title: 'Services' });
-});
+router.get('/services', indexController.displayServicesPage);
 
 /* GET Contact Me page. */
-router.get('/contact', function (req, res, next) {
-  res.render('contact', { title: 'Contact Me' });
-});
+router.get('/contact', indexController.displayContactPage);
 
 /* GET Login page */
-router.get('/login', function (req, res, next) {
-  res.render('auth/login', { title: 'Login' });
-})
+router.get('/login', indexController.displayLoginPage);
 
 /* POST Route for processing Login page */
-router.post('/login', function (req, res, next) {
-  console.log(req.body.username);
-  console.log(req.body.password);
-})
+router.post('/login', indexController.processLoginPage);
+
+/* GET Route for displaying the Register page */
+router.get('/register', indexController.displayRegisterPage);
+
+/* POST Route for processing the Register page */
+router.post('/register', indexController.processRegisterPage);
 
 module.exports = router;

@@ -11,12 +11,18 @@
 <!-- Login View -->
 <section class="about-section py-5">
     <div class="container">
+        <% if( messages.length > 0) { %>
+        <div class="alert alert-danger">
+            <%= messages %>
+        </div>
+        <% } %>
+
         <div class="row">
             <div class="offset-md-4 col-md-4">
                 <h1 class="section-heading py-1">
                     <%= title %>
                 </h1>
-                <form method="post">
+                <form action="login" method="post">
                     <fieldset class="form-group">
                         <label for="username">Username: </label>
                         <input type="text" class="form-control" name="username"
@@ -29,6 +35,9 @@
                     </fieldset>
 
                     <fieldset class="form-group text-right">
+                        <a href="/register">
+                            <input type="button" class="btn btn-waring" value="Register">
+                        </a>
                         <input type="submit" class="btn btn-success" value="Login">
                         <a href="/">
                             <input type="button" class="btn btn-waring" value="Cancel">

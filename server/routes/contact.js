@@ -23,17 +23,6 @@ router.get('/edit/:id', contactController.displayContactEditPage);
 router.post('/edit/:id', contactController.processContactEditPage);
 
 /* GET to perform deleting Contact */
-router.get('/delete/:id', (req, res, next) => {
-    let id = req.params.id;
-
-    Contact.deleteOne({ _id: id }, (err) => {
-        if (err) {
-            console.log(err);
-            res.end(err);
-        } else {
-            res.redirect('/contact-list');
-        }
-    })
-})
+router.get('/delete/:id', contactController.performDeleteContact);
 
 module.exports = router;
