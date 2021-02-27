@@ -1,0 +1,39 @@
+<!-- 
+  File name: contact-list.ejs
+  Student’s Name: Wonsuk Cha
+  StudentID: 301155132
+  Date: 2021.02.27.
+ -->
+
+<%- include ../partials/header.ejs %>
+    <%- include ../partials/main_nav.ejs %>
+
+        <!-- Contact List View -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="offset-md-2 col-md-8">
+                        <h1 class="section-heading py-1">
+                            <%= title %>
+                        </h1>
+                        <table class="table table-bordered table-striped table-hover">
+                            <tr class="d-flex">
+                                <th class="text-center col-3">Contact Name</td>
+                                <th class="text-center col-3">Contact Number</td>
+                                <th class="text-center col-6">Email Address</td>
+                            </tr>
+                            <% for (contact of contactList) { %>
+                            <tr class="d-flex">
+                                <td class="text-center col-3"><%= contact.name %></td>
+                                <td class="text-center col-3"><%= contact.number %></td>
+                                <td class="text-center col-6"><%= contact.email %></td>
+                            </tr>
+                            <% } %>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <%- include ../partials/bottom_nav.ejs %>
+            <%- include ../partials/footer.ejs %>

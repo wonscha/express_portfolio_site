@@ -23,8 +23,6 @@ mongoDB.once('open', () => {
   console.log('Connected to mongoDB...')
 });
 
-let indexRouter = require('../routes/index');
-
 let app = express();
 
 // view engine setup
@@ -40,7 +38,11 @@ app.use(express.static(path.join(__dirname, '../../node_modules')));
 
 
 // route setup
+let indexRouter = require('../routes/index');
+let contactRouter = require('../routes/contact');
+
 app.use('/', indexRouter);
+app.use('/contact-list', contactRouter);
 
 app.post("/contact", (req, res) => {
   console.log('First Name: ', req.body.fname);
