@@ -1,0 +1,51 @@
+<!-- 
+  File name: contact-list.ejs
+  Student’s Name: Wonsuk Cha
+  StudentID: 301155132
+  Date: 2021.02.27.
+ -->
+
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-4 col-md-4">
+                <h1 class="section-heading py-1">
+                    <%= title %>
+                </h1>
+                <form method="post" autocomplete="off">
+                    <fieldset class="form-group">
+                        <label for="name">Contact Name: </label>
+                        <input type="text" class="form-control" name="name"
+                            value=<%= contactToEdit.name %> id="name" required>
+                    </fieldset>
+
+                    <fieldset class="form-group">
+                        <label for="number">Contact Number: </label>
+                        <input type="text" class="form-control" name="number"
+                            value=<%= contactToEdit.number %> id="number" required>
+                    </fieldset>
+
+                    <fieldset class="form-group">
+                        <label for="email">Contact Email: </label>
+                        <input type="email" class="form-control" name="email"
+                            value=<%= contactToEdit.email %> id="email" required>
+                    </fieldset>
+
+                    <fieldset class="form-group text-right">
+                        <input type="submit" class="btn btn-success" value="Submit">
+                        <a href="/contact-list">
+                            <input type="button" class="btn btn-waring" value="Cancel">
+                        </a>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<%- include ../partials/bottom_nav.ejs %>
+<%- include ../partials/footer.ejs %>

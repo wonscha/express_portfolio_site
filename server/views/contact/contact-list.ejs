@@ -6,34 +6,46 @@
  -->
 
 <%- include ../partials/header.ejs %>
-    <%- include ../partials/main_nav.ejs %>
+<%- include ../partials/main_nav.ejs %>
 
-        <!-- Contact List View -->
-        <section>
-            <div class="container">
-                <div class="row">
-                    <div class="offset-md-2 col-md-8">
-                        <h1 class="section-heading py-1">
-                            <%= title %>
-                        </h1>
-                        <table class="table table-bordered table-striped table-hover">
-                            <tr class="d-flex">
-                                <th class="text-center col-3">Contact Name</td>
-                                <th class="text-center col-3">Contact Number</td>
-                                <th class="text-center col-6">Email Address</td>
-                            </tr>
-                            <% for (contact of contactList) { %>
-                            <tr class="d-flex">
-                                <td class="text-center col-3"><%= contact.name %></td>
-                                <td class="text-center col-3"><%= contact.number %></td>
-                                <td class="text-center col-6"><%= contact.email %></td>
-                            </tr>
-                            <% } %>
-                        </table>
-                    </div>
-                </div>
+<!-- Contact List View -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-md-8">
+                <h1 class="section-heading py-1">
+                    <%= title %>
+                </h1>
+                <table class="table table-bordered table-striped table-hover">
+                    <tr class="d-flex">
+                        <th class="text-center col-3">Contact Name</th>
+                        <th class="text-center col-3">Contact Number</th>
+                        <th class="text-center col-4">Email Address</th>
+                        <th class="text-center col-1"></th>
+                        <th class="text-center col-1"></th>
+                    </tr>
+                    <% for (let counter=0; counter < contactList.length; counter++) { %>
+                    <tr class="d-flex">
+                        <td class="text-center col-3"><%= contactList[counter].name %></td>
+                        <td class="text-center col-3"><%= contactList[counter].number %></td>
+                        <td class="text-center col-4"><%= contactList[counter].email %></td>
+                        <td class="text-center col-1">
+                            <a href="/contact-list/edit/<%= contactList[counter]._id %>" class="btn btn-sm">
+                                <i class="fas fa-pencil-alt"></i>
+                            </a>
+                        </td>
+                        <td class="text-center col-1">
+                            <a href="/contact-list/delete/<%= contactList[counter]._id %>" class="btn btn-sm">
+                                <i class="fas fa-trash-alt"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <% } %>
+                </table>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-        <%- include ../partials/bottom_nav.ejs %>
-            <%- include ../partials/footer.ejs %>
+<%- include ../partials/bottom_nav.ejs %>
+<%- include ../partials/footer.ejs %>
