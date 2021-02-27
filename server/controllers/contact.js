@@ -15,16 +15,13 @@ module.exports.displayContactListPage = (req, res, next) => {
             return console.log(err);
         } else {
             // Sort contacts by name
-            contactList.sort(function (a, b) {
-                if (a.name.toUpperCase < b.name.toUpperCase) { return -1 };
-                if (a.name.toUpperCase > b.name.toUpperCase) { return 1 };
-                return 0
-            })
+            contactList.sort((a, b) => a.name.localeCompare(b.name))
 
             // Render contact-list
             res.render('contact/contact-list', {
                 title: "Business Contact List",
-                contactList: contactList
+                contactList: contactList,
+                username: req.user ? req.user.username : ''
             });
         }
     })
@@ -40,7 +37,8 @@ module.exports.displayContactEditPage = (req, res, next) => {
         } else {
             res.render('contact/edit', {
                 title: "Business Contact Edit",
-                contactToEdit: contactToEdit
+                contactToEdit: contactToEdit,
+                username: req.user ? req.user.username : ''
             })
         }
     })

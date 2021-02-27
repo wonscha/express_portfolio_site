@@ -18,17 +18,17 @@
                 </h1>
                 <table class="table table-bordered table-striped table-hover">
                     <tr class="d-flex">
-                        <th class="text-center col-3">Contact Name</th>
-                        <th class="text-center col-3">Contact Number</th>
-                        <th class="text-center col-4">Email Address</th>
+                        <th class="text-center col-2">Contact Name</th>
+                        <th class="text-center col-2">Contact Number</th>
+                        <th class="text-center col-6">Email Address</th>
                         <th class="text-center col-1"></th>
                         <th class="text-center col-1"></th>
                     </tr>
                     <% for (let counter=0; counter < contactList.length; counter++) { %>
                     <tr class="d-flex">
-                        <td class="text-center col-3"><%= contactList[counter].name %></td>
-                        <td class="text-center col-3"><%= contactList[counter].number %></td>
-                        <td class="text-center col-4"><%= contactList[counter].email %></td>
+                        <td class="text-center col-2"><%= contactList[counter].name %></td>
+                        <td class="text-center col-2"><%= contactList[counter].number %></td>
+                        <td class="text-center col-6"><%= contactList[counter].email %></td>
                         <td class="text-center col-1">
                             <a href="/contact-list/edit/<%= contactList[counter]._id %>" class="btn btn-sm">
                                 <i class="fas fa-pencil-alt"></i>

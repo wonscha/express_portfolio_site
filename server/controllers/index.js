@@ -3,23 +3,23 @@ let userModel = require('../models/user');
 let User = userModel.User;
 
 module.exports.displayHomePage = (req, res, next) => {
-    res.render('index', { title: 'Home' });
+    res.render('index', { title: 'Home', username: req.user ? req.user.username : '' });
 };
 
 module.exports.displayAboutPage = (req, res, next) => {
-    res.render('about', { title: 'About Me' });
+    res.render('about', { title: 'About Me', username: req.user ? req.user.username : '' });
 };
 
 module.exports.displayProjectsPage = (req, res, next) => {
-    res.render('projects', { title: 'Projects' });
+    res.render('projects', { title: 'Projects', username: req.user ? req.user.username : '' });
 };
 
 module.exports.displayServicesPage = (req, res, next) => {
-    res.render('services', { title: 'Services' });
+    res.render('services', { title: 'Services', username: req.user ? req.user.username : '' });
 };
 
 module.exports.displayContactPage = (req, res, next) => {
-    res.render('contact', { title: 'Contact Me' });
+    res.render('contact', { title: 'Contact Me', username: req.user ? req.user.username : '' });
 }
 
 module.exports.displayLoginPage = (req, res, next) => {
@@ -29,6 +29,7 @@ module.exports.displayLoginPage = (req, res, next) => {
         res.render('auth/login', {
             title: "Login",
             messages: req.flash('loginMessage'),
+            username: req.user ? req.user.username : ''
         })
     } else {
         return res.redirect('/');
@@ -65,6 +66,7 @@ module.exports.displayRegisterPage = (req, res, next) => {
         res.render('auth/register', {
             title: 'Register',
             messages: req.flash('registerMessage'),
+            username: req.user ? req.user.username : ''
         })
     } else {
         return res.redirect('/');
@@ -93,16 +95,18 @@ module.exports.processRegisterPage = (req, res, next) => {
             return res.render('auth/register', {
                 title: 'Register',
                 messages: req.flash('registerMessage'),
-                displayName: req.user ? req.user.displayName : ''
+                username: req.user ? req.user.username : ''
             })
         } else {
-            // if no error exists, then registration is successful
-
             // redirect the user and authenticate them
-
             return passport.authenticate('local')(req, res, () => {
                 res.redirect('/contact-list');
             });
         }
     })
+}
+
+module.exports.performLogout = (req, res, next) => {
+    req.logout();
+    res.redirect('/');
 }
