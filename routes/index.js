@@ -1,3 +1,12 @@
+/***************
+
+File name: index.js
+Student’s Name: Wonsuk Cha
+StudentID: 301155132
+Date: 2021.02.13.
+
+ ***************/
+
 var express = require('express');
 var router = express.Router();
 
@@ -30,5 +39,10 @@ router.get('/services', function (req, res, next) {
 router.get('/contact', function (req, res, next) {
   res.render('contact', { title: 'Contact Me' });
 });
+
+/* GET Login page */
+router.get('/login', function (req, res, next) {
+  res.render('auth/login', { title: 'Login' });
+})
 
 module.exports = router;

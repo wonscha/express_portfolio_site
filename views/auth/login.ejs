@@ -1,0 +1,44 @@
+ <!-- 
+  File name: about.ejs
+  Student’s Name: Wonsuk Cha
+  StudentID: 301155132
+  Date: 2021.02.27.
+ -->    
+
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+
+<!-- Login View -->
+<section class="about-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-4 col-md-4">
+                <h1 class="section-heading py-1">
+                    <%= title %>
+                </h1>
+                <form method="post">
+                    <fieldset class="form-group">
+                        <label for="username">Username: </label>
+                        <input type="text" class="form-control" name="username"
+                            placeholder="Enter your name" id="username" required autofocus>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="password">Password: </label>
+                        <input type="password" class="form-control" name="password"
+                            placeholder="Enter password" id="password" required>
+                    </fieldset>
+
+                    <fieldset class="form-group text-right">
+                        <input type="submit" class="btn btn-success" value="Login">
+                        <a href="/">
+                            <input type="button" class="btn btn-waring" value="Cancel">
+                        </a>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- include ../partials/bottom_nav.ejs %>
+<%- include ../partials/footer.ejs %>
