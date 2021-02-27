@@ -9,7 +9,7 @@ Date: 2021.02.13.
  * Module dependencies.
  */
 
-var app = require('./app');
+var app = require('./server/config/app');
 var debug = require('debug')('expressportfoliosite:server');
 var http = require('http');
 

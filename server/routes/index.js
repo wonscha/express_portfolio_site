@@ -45,4 +45,10 @@ router.get('/login', function (req, res, next) {
   res.render('auth/login', { title: 'Login' });
 })
 
+/* POST Route for processing Login page */
+router.post('/login', function (req, res, next) {
+  console.log(req.body.username);
+  console.log(req.body.password);
+})
+
 module.exports = router;
