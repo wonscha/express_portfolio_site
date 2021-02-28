@@ -23,7 +23,6 @@ module.exports.displayContactPage = (req, res, next) => {
 }
 
 module.exports.displayLoginPage = (req, res, next) => {
-    console.log(req.user);
     // check if the user is already logged in
     if (!req.user) {
         res.render('auth/login', {
@@ -60,7 +59,6 @@ module.exports.processLoginPage = (req, res, next) => {
 }
 
 module.exports.displayRegisterPage = (req, res, next) => {
-    console.log('Hello');
     // check if the user is not logged in
     if (!req.user) {
         res.render('auth/register', {
