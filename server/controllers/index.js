@@ -1,3 +1,12 @@
+/***************
+
+File name: index.js
+Student’s Name: Wonsuk Cha
+StudentID: 301155132
+Date: 2021.02.27.
+
+***************/
+
 let passport = require('passport');
 let userModel = require('../models/user');
 let User = userModel.User;
